@@ -26,28 +26,28 @@ const DropDowHover: React.FC<{ closeMenu?: () => void }> = ({ closeMenu }) => {
           className="w-fit bg-black shadow-md border border-transparent rounded-md"
         >
           <DropdownMenuItem className="hover:bg-gray-500 text-lg">
-            <Link href="/services/AutomotiveInfotainment" className="flex justify-center items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
+            <Link href="/services/AutomotiveInfotainment" className="flex justify-center text-white font-semibold items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
               Automotive Infotainment <ArrowUpRight />
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem className="hover:bg-gray-500 text-lg">
-            <Link href="/services/SoftwareDevelopment" className="flex justify-center items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
+            <Link href="/services/SoftwareDevelopment" className="flex justify-center text-white font-semibold items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
               Software Development <ArrowUpRight />
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem className="hover:bg-gray-500 text-lg">
-            <Link href="/services/Testing&Validation" className="flex justify-center items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
+            <Link href="/services/Testing&Validation" className="flex justify-center text-white font-semibold items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
               Testing & Validation <ArrowUpRight />
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem className="hover:bg-gray-500 text-lg">
-            <Link href="/services/TalentOutsourcing" className="flex justify-center items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
+            <Link href="/services/TalentOutsourcing" className="flex justify-center text-white font-semibold items-center hover:text-[#7985FA] transition-all duration-150" onClick={closeMenu}>
               Technical Talent Outsourcing <ArrowUpRight />
             </Link>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-    </div>
+    </div>  
   );
 };
 

@@ -24,7 +24,7 @@ const EmailSub = () => {
       form.reset();  
 
       const contentType = response.headers.get("Content-Type");
-      let result: any;
+      let result;
 
       if (contentType && contentType.includes("application/json")) {
         result = await response.json();
