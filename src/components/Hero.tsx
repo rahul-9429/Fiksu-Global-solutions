@@ -10,7 +10,9 @@ const Hero = () => {
      <div className="absolute left-0 right-0 bottom-0 h-[300px]"></div></div>
     <div className='flex flex-col  h-fit px-10 sm:px-20 '>
      
-      <div className='flex flex-col  h-full sm:w-[50%] w-[100%] min-h-screen '>
+      <div className='flex flex-col  h-full sm:w-[50%] w-[100%] min-h-screen bg-cover bg-center'
+      // style={{ backgroundImage: "url('/heroImg.pg')" }}
+      >
       <h1 className='text-6xl sm:text-7xl pt-20 font-bold  '>Transforming In-Car Experiences with 
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#70C6FE] to-[#7985FA]"
     > Smart Infotainment</span></h1>

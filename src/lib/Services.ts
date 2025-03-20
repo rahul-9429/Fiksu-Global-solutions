@@ -14,6 +14,7 @@ export const Services = [
         icon: "/sd.png",
         imagePath: "",
         diffUrl:"",
+        className: "mt-6 mb-5.5"
 
     },
     {

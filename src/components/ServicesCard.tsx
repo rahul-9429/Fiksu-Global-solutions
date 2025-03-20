@@ -9,6 +9,7 @@ interface ServicesCardProps {
   diffUrl: string;
   icon: string;
   detailedDescription: string;
+  className?: string;
 }
 
 const ServicesCard: React.FC<{ data: ServicesCardProps }> = ({ data }) => {
@@ -23,7 +24,7 @@ const ServicesCard: React.FC<{ data: ServicesCardProps }> = ({ data }) => {
           backgroundPosition: "center" 
         }}
       >
-        <Image src={data.icon} width={100} height={100} alt={data.title} className="rounded-md" />
+        <Image src={data.icon} width={100} height={100} alt={data.title} className={`rounded-md ${data.className}`} />
 
         <h1 className="text-xl font-bold mt-2">{data.title}</h1>
         <p className="text-gray-400 line-clamp-2 max-w-[80%] text-center">{data.detailedDescription}</p>

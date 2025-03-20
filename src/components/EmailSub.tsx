@@ -9,10 +9,10 @@ const EmailSub = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const form = event.currentTarget;  
-
+    formData.append("Email", email);
     try {
       const response = await fetch(
-        "YOUR_GOOGLE_SHEET_SCRIPT_URL_HERE", // Replace with actual script URL
+        "https://script.google.com/macros/s/AKfycbxt2c40zJUrTfj4m-77FZdAV8I0l7XQxUi5hb-gwK-LABSpXUqx8EIbt6ETCIz4UhIx/exec", 
         {
           method: "POST",
           body: formData,
@@ -36,7 +36,6 @@ const EmailSub = () => {
        
     } catch (error) {
       console.error("Error:", error);
-      // alert("Subscription failed.");
     }
   };
 
@@ -61,7 +60,7 @@ const EmailSub = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
-            className="tracking-wider bg-transparent text-xl placeholder:flex placeholder:items-center placeholder:justify-center w-[100%] border-0 outline-none ml-3"
+            className="tracking-wider bg-black text-xl placeholder:flex placeholder:items-center placeholder:justify-center w-[100%] border-0 outline-none ml-3"
           />
           <button
             type="submit"
