@@ -1,6 +1,9 @@
 "use client";   
 // import Team from '@/components/Team';
 import React, { useState } from 'react'
+import Image from 'next/image';
+import AboutUs from '../../../public/AboutBgNULL.png';
+
 
 const Page = () => {
     const [position, setPosition] = useState({ x: "50%", y: "50%" });
@@ -16,7 +19,8 @@ const Page = () => {
      <div className="absolute right-[100px] top-[-180px] z-10 h-[200px] w-[400px] rotate-0 transform rounded-full bg-gradient-to-tl from-slate-800 via-[#7985FA] to-zinc-400 blur-[150px]"></div>
      <div className="fixed dotted-background h-full top-0 left-0 right-0 z-0">
      <div className="absolute left-0 right-0 bottom-0 h-[300px]"></div></div>
-        <div className='w-[100%] sm:w-[60%] pt-14'>
+     <div className='flex flex-col sm:flex-row '>
+     <div className='w-[100%] sm:w-[60%] pt-14'>
             <h1 className="text-4xl py-4 font-bold text-center sm:text-left text-transparent bg-clip-text bg-gradient-to-r from-[#70C6FE] to-[#7985FA]">
             About Fiksu</h1>
             <p className='text-lg text-justify py-2'>
@@ -27,6 +31,11 @@ const Page = () => {
             </p>
             
         </div>
+        <div className='sm:w-[40%] w-[100%] flex justify-center items-center'>
+          <Image src={AboutUs} alt='aboutus' width={500} height={500}  className='test-effect'/>
+        </div>
+     </div>
+        
         <div className='flex flex-col  sm:flex-row gap-10 py-20 justify-center items-center'>
 <div
       className="relative group overflow-hidden border-2  border-[#70C6FE] rounded-xl shadow-md transition duration-300 w-[90%] sm:w-[28%]"

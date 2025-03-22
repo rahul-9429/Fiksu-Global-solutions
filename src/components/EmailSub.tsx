@@ -1,18 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const EmailSub = () => {
   const [email, setEmail] = useState("");
   const [subState, setSubState] = useState(false);
 
-  const handleEmail = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const form = event.currentTarget;  
     formData.append("Email", email);
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxt2c40zJUrTfj4m-77FZdAV8I0l7XQxUi5hb-gwK-LABSpXUqx8EIbt6ETCIz4UhIx/exec", 
+        "https://script.google.com/macros/s/AKfycbxt2c40zJUrTfj4m-77FZdAV8I0l7XQxUi5hb-gwK-LABSpXUqx8EIbt6ETCIz4UhIx/exec",
         {
           method: "POST",
           body: formData,
@@ -20,24 +19,29 @@ const EmailSub = () => {
       );
 
       setSubState(true);
-      setEmail("");  
-      form.reset();  
+      setEmail(""); // ✅ Clears input field automatically
 
       const contentType = response.headers.get("Content-Type");
       let result;
-
       if (contentType && contentType.includes("application/json")) {
         result = await response.json();
       } else {
         result = await response.text();
       }
-
       console.log("Success:", result);
-       
     } catch (error) {
       console.error("Error:", error);
     }
   };
+
+  useEffect(() => {
+    if (subState) {
+      const timer = setTimeout(() => {
+        setSubState(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [subState]);
 
   return (
     <div className="px-5 sm:px-20 flex justify-center items-center gap-5 min-h-[50vh]">
@@ -53,9 +57,13 @@ const EmailSub = () => {
           Subscribe to our newsletter and get exclusive insights on the latest innovations in AI-powered infotainment, smart connectivity, and in-car entertainment.
         </p>
 
-        <form onSubmit={handleEmail} className="flex justify-between items-center gap-5 border-2 border-[#7985FA]/60 rounded-full w-[100%] sm:w-[60%]">
+        <form
+          onSubmit={handleEmail}
+          className="flex justify-between items-center gap-5 border-2 border-[#7985FA]/60 rounded-full w-[100%] sm:w-[60%]"
+        >
           <input
             type="email"
+            name="email"
             placeholder="you@domain.com"
             onChange={(e) => setEmail(e.target.value)}
             value={email}

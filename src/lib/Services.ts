@@ -5,7 +5,7 @@ export const Services = [
         detailedDescription:'We specialize in developing cutting-edge infotainment systems that enhance the driving experience. Our solutions integrate seamlessly with both traditional and electric vehicles, providing intuitive interfaces and advanced connectivity features.As vehicles transition into software-driven systems, electronic architectures are evolving to support an increasing number of ECUs and advanced functionalities. The automotive industry is undergoing a transformation driven by innovations in connectivity, electrification, and shared mobility. To stay ahead, OEMs and Tier 1 suppliers are reshaping their product strategies and business models. With deep technological expertise and strong software engineering capabilities, Fiksu Global Solutions helps automakers and suppliers accelerate their journey toward the future of mobility, offering advanced software solutions for connected, autonomous, and electric vehicle technologies.' ,
         icon: "/it.png",
         imagePath:"" ,
-        diffUrl:"",
+        diffUrl:"/services/AutomotiveInfotainment",
     },
     {
         title: "Software Development",
@@ -13,8 +13,8 @@ export const Services = [
         detailedDescription: 'Our development team specializes in creating robust software solutions for automotive applications. From cluster displays to advanced driver assistance systems, we deliver high-quality code that meets automotive standards. As vehicles evolve into software-driven systems, electronic architectures are expanding to accommodate more ECUs and complex functionalities. The automotive industry is undergoing a major transformation, driven by advancements in connectivity, electrification, and shared mobility. To keep pace with these shifts, OEMs and Tier 1 suppliers are refining their product strategies and business models. Leveraging extensive technological expertise and advanced software engineering capabilities, Fiksu Global Solutions empowers automakers and suppliers to accelerate the future of mobility, delivering cutting-edge software solutions for connected, autonomous, and electric vehicle technologies.',
         icon: "/sd.png",
         imagePath: "",
-        diffUrl:"",
-        className: "mt-6 mb-5.5"
+        diffUrl:"/services/SoftwareDevelopment",
+        className: "mt-6 mb-6"
 
     },
     {
@@ -25,7 +25,7 @@ export const Services = [
         There is a growing demand for diverse test solutions, frameworks, and automation services to enhance efficiency, improve quality, and reduce costs by streamlining test cycles. Additionally, comprehensive test labs and infrastructure are crucial for enabling offshore and remote testing of systems, including Infotainment, Telematics, V2X, ADAS, Autonomous Driving, and Vehicle Electrification.`,
         icon: "/tv.png",
         imagePath: "",
-        diffUrl:"",
+        diffUrl:"/services/Testing&Validation",
 
     },
     {
@@ -35,7 +35,7 @@ export const Services = [
         Fiksu Global Solutions provides comprehensive technical talent outsourcing, offering skilled engineers and software professionals for automotive R&D, embedded systems, software development, testing, and validation. With deep industry knowledge and a flexible engagement model, we empower businesses to drive innovation, enhance efficiency, and navigate the evolving mobility landscape.`,
         icon: "/os.png",
         imagePath: "",
-        diffUrl: "",
+        diffUrl: "/services/TalentOutsourcing",
 
     }
 ]
