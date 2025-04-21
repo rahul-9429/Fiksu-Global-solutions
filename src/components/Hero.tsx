@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
 
         <div className="relative flex flex-col h-full items-center justify-center w-[100%] min-h-[calc(100vh-7rem)]">
-          <h1 className="text-6xl sm:text-7xl pt-20 font-bold -mt-20 sm:w-[50%] w-[100%] text-center drop-shadow-[0_0_60px_#000]">
+          <h1 className="text-5xl sm:text-7xl pt-20 font-bold -mt-20 sm:w-[50%] w-[100%] text-center drop-shadow-[0_0_60px_#000]">
             Transforming In-Car Experiences with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#70C6FE] to-[#7985FA]">
               {' '}Smart Infotainment
